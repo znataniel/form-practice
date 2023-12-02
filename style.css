@@ -13,16 +13,60 @@ body {
 
   margin: 0;
   padding: 0 15%;
+
+  background-color: #f2d5bb;
+
+  font-family: sans-serif;
 }
 
 .imageSection {
   flex: 1 1 0;
 
-  background-color: purple;
+  background-image: url("./img/shirtless-man-practicing-capoeira-by-himself-beach.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.imageSection > h1 {
+  text-align: center;
+
+  background-color: rgba(242, 213, 187, 0.6);
+  font-family: norsebold, sans-serif;
+  font-size: 5rem;
+
+  padding: 2rem;
+}
+
+.attribution {
+  text-align: center;
+  padding: 1rem;
 }
 
 .formSection {
   flex: 2 2 0;
 
-  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.formSection > * {
+  padding-left: 2rem;
+}
+
+.formSection form {
+  background-color: #a0c9d9;
+  padding: 1rem 2rem;
+}
+
+ul,
+ul > li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul > li > label > * {
+  display: block;
 }
