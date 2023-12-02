@@ -26,6 +26,10 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .imageSection > h1 {
@@ -67,6 +71,10 @@ ul > li {
   margin: 0;
 }
 
-ul > li > label > * {
-  display: block;
+ul > li {
+  display: flex;
+  width: 150px;
+}
+ul > li > label {
+  flex: 1;
 }
