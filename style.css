@@ -7,6 +7,12 @@
   font-style: normal;
 }
 
+html {
+  --border-form: #8d9fa6;
+  --bg-color: #b88d6e;
+  --bg-form-sec: #bbd1dd;
+}
+
 body {
   display: flex;
   height: 100vh;
@@ -14,9 +20,9 @@ body {
   margin: 0;
   padding: 0 15%;
 
-  background-color: #f2d5bb;
+  background-color: var(--bg-color);
 
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .imageSection {
@@ -26,6 +32,8 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  border-right: 2px solid var(--border-form);
+  border-left: 2px solid var(--border-form);
 
   display: flex;
   flex-direction: column;
@@ -35,11 +43,13 @@ body {
 .imageSection > h1 {
   text-align: center;
 
-  background-color: rgba(242, 213, 187, 0.6);
+  background-color: var(--bg-color);
   font-family: norsebold, sans-serif;
   font-size: 5rem;
 
   padding: 2rem;
+  margin: 2rem;
+  border-radius: 0.5rem;
 }
 
 .attribution {
@@ -53,6 +63,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  background-color: var(--bg-form-sec);
+  border-right: 2px solid var(--border-form);
 }
 
 .formSection > * {
@@ -61,6 +74,9 @@ body {
 
 .formSection form {
   background-color: #a0c9d9;
+  border-top: 2px solid var(--border-form);
+  border-bottom: 2px solid var(--border-form);
+
   padding: 1rem 2rem;
 }
 
@@ -71,10 +87,49 @@ ul > li {
   margin: 0;
 }
 
-ul > li {
+ul {
   display: flex;
-  width: 150px;
+  flex-wrap: wrap;
 }
+
+ul > li {
+  width: 50%;
+  height: 2rem;
+  margin-top: 2rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 ul > li > label {
-  flex: 1;
+  font-weight: 700;
+}
+
+ul > li > input {
+  margin-right: 2em;
+
+  border-style: solid;
+  border-color: var(--border-form);
+
+  font-size: 1rem;
+}
+
+button[type="submit"] {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 1rem 2rem;
+
+  border-radius: 1rem;
+  border: 2px solid var(--border-form);
+  background-color: var(--bg-form-sec);
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.formSection > p > a {
+  text-decoration: none;
+  color: black;
+
+  font-weight: bold;
 }
